@@ -1,0 +1,6 @@
+suites:
+    main:
+        namespace:   Cyrulik\Dice
+        psr4_prefix: Cyrulik\Dice
+        spec_path:   src/Dice
+        src_path:    src/Dice

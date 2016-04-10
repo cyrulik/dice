@@ -1,0 +1,25 @@
+{
+  "name": "cyrulik/dice",
+  "description": "Simple dice roll package",
+  "keywords": ["dice", "die", "rpg", "cyrulik"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mariusz Kosek",
+      "email": "daevar@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "~2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cyrulik\\Dice\\": "src/Dice/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
