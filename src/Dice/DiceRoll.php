@@ -23,20 +23,14 @@ class DiceRoll
     private $operation;
 
     /**
-     * @param string $dice
+     * @param array $data
      */
-    public function __construct($dice)
+    public function __construct(array $data)
     {
-        $roll = preg_split( "/(d|\+|x)/", $dice);
-
-        if (strchr($dice, 'x'))
-            $this->operation = 'x';
-        elseif (strchr($dice, '+'))
-            $this->operation = '+';
-
-        $this->times = $roll[0] ?: 1;
-        $this->dice = $roll[1];
-        $this->number = isset($roll[2]) ? $roll[2] : 0;
+        $this->times = $data[1] ?: 1;
+        $this->dice = $data[2];
+        $this->operation = isset($data[3]) ? $data[3] : null;
+        $this->number = isset($data[4]) ? $data[4] : null;
     }
 
     /**
@@ -54,7 +48,13 @@ class DiceRoll
             case '+': $result += $this->number;
                 break;
 
-            case 'x': $result *= $this->number;
+            case '-': $result -= $this->number;
+                break;
+
+            case '/': $result /= $this->number;
+                break;
+
+            case '*': $result *= $this->number;
                 break;
         }
 

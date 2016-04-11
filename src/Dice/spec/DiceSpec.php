@@ -34,6 +34,6 @@ class DiceSpec extends ObjectBehavior
 
     function it_can_roll_one_six_sided_dice_and_multiply_result_by_four()
     {
-        $this->roll('1d6x4')->shouldBe(12);
+        $this->roll('1d6*4')->shouldBe(12);
     }
 }

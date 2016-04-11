@@ -12,11 +12,11 @@ class Dice
     public function roll($dice)
     {
         $data = [];
-        $valid = preg_match("/\d*d{1}\d+(\+|x)?\d*/i", $dice, $data);
+        $valid = preg_match( '/(\d+)?d(\d+)[\s]?([*|+|\-|\/])?[\s]?(\d+)?/', $dice, $data);
 
         if (! $valid)
             throw new InvalidArgumentException('Invalid dice code given');
 
-        return (new DiceRoll($dice))->roll();
+        return (new DiceRoll($data))->roll();
     }
 }
