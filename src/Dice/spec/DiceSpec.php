@@ -36,4 +36,9 @@ class DiceSpec extends ObjectBehavior
     {
         $this->roll('1d6*4')->shouldBe(12);
     }
+    
+    function it_can_roll_three_ten_sided_dice_and_divide_result_by_two()
+    {
+        $this->roll('3d10/2')->shouldBe(10);
+    }
 }

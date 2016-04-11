@@ -1,12 +1,13 @@
 {
   "name": "cyrulik/dice",
   "description": "Simple dice roll package",
-  "keywords": ["dice", "die", "rpg", "cyrulik"],
+  "keywords": ["dice", "die", "rpg", "laravel", "cyrulik"],
   "license": "MIT",
   "authors": [
     {
-      "name": "Mariusz Kosek",
-      "email": "daevar@gmail.com"
+      "name": "Cyrulik",
+      "email": "daevar@gmail.com",
+      "homepage": "http://www.deathmaze.net"
     }
   ],
   "require": {
