@@ -1,3 +1,3 @@
 # Dice roll
 
-A simple dice roll plugin for laravel.
+A simple dice roll plugin for anything.
