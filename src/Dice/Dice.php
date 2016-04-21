@@ -9,7 +9,7 @@ class Dice
      * @return int
      * @throws InvalidArgumentException
      */
-    public function roll($dice)
+    public static function roll($dice)
     {
         $data = [];
         $valid = preg_match( '/(\d+)?d(\d+)[\s]?([*|+|\-|\/])?[\s]?(\d+)?/', $dice, $data);
@@ -17,14 +17,14 @@ class Dice
         if (! $valid)
             throw new InvalidArgumentException('Invalid dice code given');
 
-        return $this->calculate($data);
+        return self::calculate($data);
     }
 
     /**
      * @param array $data
      * @return int
      */
-    private function calculate(array $data)
+    private static function calculate(array $data)
     {
         $result = 0;
 
